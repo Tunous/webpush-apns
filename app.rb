@@ -8,7 +8,7 @@ require 'dotenv/load' if ENV['RACK_ENV'] == 'development'
 
 CONNECTION_OPTIONS = {
   auth_method: :token,
-  cert_path: StringIO.new(ENV['APNS_AUTH_KEY']),
+  cert_path: 'key.p8',
   key_id: ENV['APNS_KEY_ID'],
   team_id: ENV['APPLE_TEAM_ID']
 }.freeze
